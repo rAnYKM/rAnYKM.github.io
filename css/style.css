@@ -654,6 +654,51 @@ article footer .addthis iframe {
   margin-right: 10px;
   display: inline-block;
 }
+#sidebar .bio .name {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 15px 10px;
+  border-bottom: 1px solid #ddd;
+}
+#sidebar .bio .entry {
+  font-size: 0.9em;
+  padding: 15px 20px;
+}
+#sidebar .bio .alias {
+  color: #999;
+}
+#sidebar .bio small {
+  margin-left: 15px;
+  color: #999;
+}
+#sidebar .bio h4 {
+  font-weight: normal;
+}
+#sidebar .bio img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 2px 2px;
+  width: 220px;
+  border: 2px solid #ddd;
+}
+#sidebar .bio #nav-home:before {
+  font-family: FontAwesome;
+  content: '\f2bd';
+  padding-right: 0.5em;
+}
+#sidebar .bio #nav-location:before {
+  font-family: FontAwesome;
+  content: '\f2bc';
+  padding-right: 0.5em;
+}
+#sidebar .bio #nav-school:before {
+  font-family: FontAwesome;
+  content: '\f19c';
+  padding-right: 0.5em;
+}
 #footer {
   color: #999;
   margin-bottom: 50px;

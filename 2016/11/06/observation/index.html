@@ -3,13 +3,15 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>rAnYKM&#39;s Note Page</title>
+  <title>Communities and Node Attributes - Observations from Facebook Ego Networks | rAnYKM&#39;s Note Page</title>
   <meta name="author" content="Jiayi Chen">
+  
+  <meta name="description" content="Network Density and Community StructureNetwork Density is defined as the probability that one node connects with another one. Numerically, we can calc">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  
+  <meta property="og:title" content="Communities and Node Attributes - Observations from Facebook Ego Networks"/>
   <meta property="og:site_name" content="rAnYKM&#39;s Note Page"/>
 
   
@@ -43,8 +45,7 @@
 <div class="clearfix"></div>
 </header>
   <div id="content" class="inner">
-    <div id="main-col" class="alignleft"><div id="wrapper">
-  <article class="post">
+    <div id="main-col" class="alignleft"><div id="wrapper"><article class="post">
   
   <div class="post-content">
     <header>
@@ -54,7 +55,7 @@
       
       
   
-    <h1 class="title"><a href="/2016/11/06/observation/">Communities and Node Attributes - Observations from Facebook Ego Networks</a></h1>
+    <h1 class="title">Communities and Node Attributes - Observations from Facebook Ego Networks</h1>
   
 
     </header>
@@ -359,6 +360,29 @@
       
         
         
+  
+  <div class="tags">
+    <a href="/tags/Social-Networks/">Social Networks</a>
+  </div>
+
+        
+  <div class="addthis addthis_toolbox addthis_default_style">
+    
+      <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    
+    
+      <a class="addthis_button_tweet"></a>
+    
+    
+      <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
+    
+    
+      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
+    
+    <a class="addthis_counter addthis_pill_style"></a>
+  </div>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
+
       
       <div class="clearfix"></div>
     </footer>
@@ -366,64 +390,13 @@
 </article>
 
 
+<section id="comment">
+  <h1 class="title">Comments</h1>
 
-
-  <article class="post">
   
-  <div class="post-content">
-    <header>
-      
-        <div class="icon"></div>
-        <time datetime="2016-10-20T07:00:00.000Z"><a href="/2016/10/20/MiniProposal/">2016-10-20</a></time>
-      
-      
-  
-    <h1 class="title"><a href="/2016/10/20/MiniProposal/">Inferring Missing Attributes in Online Social Networks</a></h1>
-  
+</section>
 
-    </header>
-    <div class="entry">
-      
-        <h2 id="Scenario"><a href="#Scenario" class="headerlink" title="Scenario"></a>Scenario</h2><p>In Online Social Networks, a <strong>community structure</strong> is defined as a set of nodes grouped with internally dense connections from the whole network. That is to say, the probability for two nodes to form a social relation is higher if they are in the same community. The intrinsic reason for the community structure is so-called homophily, which indicates the trend that two similar social actors are more likely to be friends. The common aspects which are shared among nodes in the same community include common friends, or common properties (e.g., profile attributes). Therefore, it is possible to use community structures to infer the missing attributes as long as there exist some kinds of obvious correlations among social actors and attribtues.</p>
-<h2 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h2><p>Assume that we have a fully observed social network $G_N=(V_N, E_N)$ where $V_N$ is the social actor set and $E_N$ is the social relation set, and a partially observed actor-attribute bipartite graph $G_A=(V_N+V_A, E_A’), E_A’ \subset E_A$ where $V_A$ is the attribute node set, and $E_A$ is the set of all attribute links that really exist while $E_A’$ only contains the observed ones. Given an actor-attribute pair $(v, a) \in V_N \times V_A$, determine whether $(v,a) \in E_A$.</p>
-<h2 id="Modeling"><a href="#Modeling" class="headerlink" title="Modeling"></a>Modeling</h2><p>To infer the missing attributes, we first need to build a generative model to abstract the original social network with both stuctural information and profile information taken into consideration. In this step, we want our generative model to generate a new network which approaches the orignal network graph by means of obtaining the parameters (solve an optimization problem). Generally, a generative network model contains a matrix of the probabilities of every two social actors having a social relation.</p>
-<h3 id="Typical-Generative-Network-Models"><a href="#Typical-Generative-Network-Models" class="headerlink" title="Typical Generative Network Models"></a>Typical Generative Network Models</h3><ul>
-<li><strong>Chung Lu Graph Models (CL)</strong></li>
-</ul>
-<p>Every edge is sampled proportional to the product of the degrees of its endpoints<br>$$ P_{CL}(e_{i,j} \in E|\Theta_{CL}) = \frac{\theta_{d_i}\theta_{d_j}}{\sum_{v_k \in V}\theta_{d_k}} $$<br>where $\Theta_{CL}=\theta_{d_1},\ldots, \theta_{d_{|V|}}$ and $\theta_{d_i}=d_i$. The formulation guarantees the expected degree of the sampled graph is equal to the degree of the original graph.</p>
-<ul>
-<li><strong>Kronecker Product Graph Models (KPGM)</strong></li>
-</ul>
-<p>$K$ Kronecker products of a $b \times b$ initiator matrix of parameter $\Theta_{KP}$ are used to define the marginal probabilities of edges in the network.<br>$$ P_{KP}(e_{i,j} \in E|\Theta_{KP}) = \prod_{k=1}^{K} \Theta_{KP}(\sigma_{ki},\sigma_{kj}) $$<br>where $\sigma_{k,i}$ indicates the position of the parameter in the initiator matrix $\Theta_{KP}$ that is associated with $v_i$ in the $k$th Kronecker multiplication.</p>
-<h3 id="Generative-Attributed-Network-Models"><a href="#Generative-Attributed-Network-Models" class="headerlink" title="Generative Attributed Network Models"></a>Generative Attributed Network Models</h3><ul>
-<li><p><strong>Atributed Graph Model (AGM)</strong><br>If the correlations of attributes are taken into account, the generative model incorporates distributions over both the attribute $P(X|\Theta_X)$ and $P(E|\Theta_M)$.<br>$$ P(G|X, \Theta_{M}, \Theta_{F}) = \prod_{e_{i,j} \in E} P(e_{i,j}|f(x_i,x_j), \Theta_{M}, \Theta_{F}) $$<br>$$\begin{eqnarray}<br>P_o(e_{i,j}|f(x_i,x_j), \Theta_{M}, \Theta_{F}) &amp;=&amp; P_o(e_{i,j}|\Theta_{M}, \Theta_{F}) \frac{P_o(f(x_i,x_j)|e_{i,j}, \Theta_{M}, \Theta_{F})}{P_o(f(x_i,x_j)|\Theta_{M}, \Theta_{F})} \\<br>&amp;\approx&amp; P_M(e_{i,j}|\Theta_{M}) \frac{P_o(f(x_i,x_j)|e_{i,j}, \Theta_{M}, \Theta_{F})}{P_M(f(x_i,x_j)|e_{i,j},\Theta_{M}, \Theta_{F})}<br>\end{eqnarray}$$<br>where $x_i \in X$ (attribute vector/matrix), $f(x_i,x_j)$ is a deterministic function which maps tuples of attribute vectors to a single model of correlation across linked edges.</p>
-</li>
-<li><p><strong>Social Circle Detection</strong> Profile similarity parameter is introduced in this model, with social circle division treated as a latent variable.<br>$$<br>P_{SC}(e_{i,j}\in E|\mathcal{C}, \Theta_{SC}) = \frac{e^{\Phi(e_{i,j})}}{1+e^{\Phi(e_{i,j})}}<br>$$<br>$$<br>\Phi(e) = \sum_{C_k \in \mathcal{C}}(\delta(e \in C_k)) - \alpha_k \delta(e \notin C_k) \langle \phi(e), \theta_k \rangle<br>$$<br>where $\mathcal{C}$ is the social circle set, $\delta(c)$ is the indicator function, $\alpha_k$ is the pernalizing parameter and $\phi(e)$ is the profile similarity between two ends of the edge.</p>
-</li>
-</ul>
-<h3 id="Our-Model-Generative-Social-Attribute-Network-Model"><a href="#Our-Model-Generative-Social-Attribute-Network-Model" class="headerlink" title="Our Model: Generative Social Attribute Network Model"></a>Our Model: Generative Social Attribute Network Model</h3><p>The former models only use the similarity function as conditions. It is difficult to recover the attribute information from this kind of function. That is to say, we need to directly combine the attribute bigraph into conditions.<br>$$<br>P(G_N|G_A, \Theta_N, \Theta_A)=<br>\prod_{e_{i,j} \in E_N}{P(e_{i,j} \vert \mathcal{A}_{i}, \mathcal{A}_j, \Theta_N, \Theta_A)} \times \prod_{e_{i,j} \not\in E_N}{P(e_{i,j} \vert \mathcal{A}_i,\mathcal{A}_j, \Theta_N, \Theta_A)}<br>$$</p>
-
-      
-    </div>
-    <footer>
-      
-        
-        
-      
-      <div class="clearfix"></div>
-    </footer>
-  </div>
-</article>
-
-
-
-
-
-<nav id="pagination">
-  
-  
-  <div class="clearfix"></div>
-</nav></div></div>
+</div></div>
     <aside id="sidebar" class="alignright">
   <div class="search">
   <form action="//google.com/search" method="get" accept-charset="utf-8">
@@ -484,6 +457,26 @@
 (function($){
   $('.fancybox').fancybox();
 })(jQuery);
+</script>
+
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    }); 
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script><!-- hexo-inject:begin --><!-- Begin: Injected MathJax -->
 <script type="text/x-mathjax-config">
   MathJax.Hub.Config({"tex2jax":{"inlineMath":[["$","$"],["\\(","\\)"]],"skipTags":["script","noscript","style","textarea","pre","code"],"processEscapes":true},"TeX":{"equationNumbers":{"autoNumber":"AMS"}}});
@@ -502,8 +495,6 @@
 </script>
 <!-- End: Injected MathJax -->
 <!-- hexo-inject:end -->
-
-
 
 
 </body>
