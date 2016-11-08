@@ -3,15 +3,15 @@
 <head>
   <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
   
-  <title>Communities and Node Attributes - Observations from Facebook Ego Networks | rAnYKM&#39;s Note Page</title>
+  <title>Social Networks, Communities and Node Attributes - Observations from Facebook Ego Networks | rAnYKM&#39;s Note Page</title>
   <meta name="author" content="Jiayi Chen">
   
-  <meta name="description" content="Network Density and Community StructureNetwork Density is defined as the probability that one node connects with another one. Numerically, we can calc">
+  <meta name="description" content="Community Detection is among the most popular research topics on social network. According to the definition, the nodes in the same community (module) have dense connections with each other. Many community detection algorithms or models originate from this idea. Among them, the Stochastic Block Model (SBM) is a generative graph model to produce graphs containing communities, subsets characterized by being connected with one another with particular edge densities. In this report, we conduct several experiments and discuss about the relationship among communities, network charateristics and attributes.">
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="Communities and Node Attributes - Observations from Facebook Ego Networks"/>
+  <meta property="og:title" content="Social Networks, Communities and Node Attributes - Observations from Facebook Ego Networks"/>
   <meta property="og:site_name" content="rAnYKM&#39;s Note Page"/>
 
   
@@ -55,18 +55,20 @@
       
       
   
-    <h1 class="title">Communities and Node Attributes - Observations from Facebook Ego Networks</h1>
+    <h1 class="title">Social Networks, Communities and Node Attributes - Observations from Facebook Ego Networks</h1>
   
 
     </header>
     <div class="entry">
       
-        <h2 id="Network-Density-and-Community-Structure"><a href="#Network-Density-and-Community-Structure" class="headerlink" title="Network Density and Community Structure"></a>Network Density and Community Structure</h2><p><strong>Network Density</strong> is defined as the probability that one node connects with another one. Numerically, we can calculate it as<br>$$ \rho = \frac{|E|}{|V|*(|V|-1)}. $$</p>
+        <p><strong>Community Detection</strong> is among the most popular research topics on social network. According to the definition, the nodes in the same community (module) have dense connections with each other. Many community detection algorithms or models originate from this idea. Among them, the Stochastic Block Model (SBM) is a generative graph model to produce graphs containing communities, subsets characterized by being connected with one another with particular edge densities. In this report, we conduct several experiments and discuss about the relationship among communities, network charateristics and attributes.</p>
+<a id="more"></a>
+<h2 id="Network-Density-and-Community-Structure"><a href="#Network-Density-and-Community-Structure" class="headerlink" title="Network Density and Community Structure"></a>Network Density and Community Structure</h2><p><strong>Network Density</strong> is defined as the probability that one node connects with another one. Numerically, we can calculate it as<br>$$ \rho = \frac{|E|}{|V|*(|V|-1)}. $$</p>
 <p>And in the undirected network/graph, we can calculate it as<br>$$ \rho = \frac{2|E|}{|V|*(|V|-1)}. $$</p>
 <blockquote>
 <p><em><a href="https://en.wikipedia.org/wiki/Community_structure" target="_blank" rel="external">Wikipedia: Community Structure</a></em><br>In the study of complex networks sets of nodes such that each set of nodes is densely connected internally.</p>
 </blockquote>
-<p>One common property of communities is that the network density is high inside the communities. In the experiment.</p>
+<p>One common property of communities is that the network density is high inside the communities. In the experiment, we first select one attribute, then extract all the nodes with this attribute to build a sub-graph, and finally measure the network density of the sub-graph for comparison. </p>
 <h3 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h3><p><strong>Ego Network #0 (347 nodes)</strong> Overall Network Density = 0.0839233062917</p>
 <table>
 <thead>
@@ -377,8 +379,6 @@
       <a class="addthis_button_google_plusone" g:plusone:size="medium"></a>
     
     
-      <a class="addthis_button_pinterest_pinit" pi:pinit:layout="horizontal"></a>
-    
     <a class="addthis_counter addthis_pill_style"></a>
   </div>
   <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js"></script>
@@ -394,30 +394,14 @@
   <h1 class="title">Comments</h1>
 
   
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+  
 </section>
 
 </div></div>
     <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:www.ranykm.com">
-  </form>
-</div>
-
-  
-
-  
-<div class="widget tag">
-  <h3 class="title">Tags</h3>
-  <ul class="entry">
-  
-    <li><a href="/tags/Social-Networks/">Social Networks</a><small>2</small></li>
-  
-  </ul>
-</div>
-
-
   <div class="widget bio">
 	<h3 class="title">Short Bio</h3>
 	<img src="/img/bio/logo.png"></img>
@@ -435,6 +419,19 @@
  		</ul>
  		
 </div> 
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Social-Networks/">Social Networks</a><small>2</small></li>
+  
+  </ul>
+</div>
+
 </aside>
     <div class="clearfix"></div>
   </div>
@@ -448,6 +445,18 @@
 <script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
 
+
+<script type="text/javascript">
+var disqus_shortname = 'jychen_uvic';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
 
 
 

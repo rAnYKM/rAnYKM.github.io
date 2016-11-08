@@ -54,309 +54,21 @@
       
       
   
-    <h1 class="title"><a href="/2016/11/06/observation/">Communities and Node Attributes - Observations from Facebook Ego Networks</a></h1>
+    <h1 class="title"><a href="/2016/11/06/observation/">Social Networks, Communities and Node Attributes - Observations from Facebook Ego Networks</a></h1>
   
 
     </header>
     <div class="entry">
       
-        <h2 id="Network-Density-and-Community-Structure"><a href="#Network-Density-and-Community-Structure" class="headerlink" title="Network Density and Community Structure"></a>Network Density and Community Structure</h2><p><strong>Network Density</strong> is defined as the probability that one node connects with another one. Numerically, we can calculate it as<br>$$ \rho = \frac{|E|}{|V|*(|V|-1)}. $$</p>
-<p>And in the undirected network/graph, we can calculate it as<br>$$ \rho = \frac{2|E|}{|V|*(|V|-1)}. $$</p>
-<blockquote>
-<p><em><a href="https://en.wikipedia.org/wiki/Community_structure" target="_blank" rel="external">Wikipedia: Community Structure</a></em><br>In the study of complex networks sets of nodes such that each set of nodes is densely connected internally.</p>
-</blockquote>
-<p>One common property of communities is that the network density is high inside the communities. In the experiment.</p>
-<h3 id="Results"><a href="#Results" class="headerlink" title="Results"></a>Results</h3><p><strong>Ego Network #0 (347 nodes)</strong> Overall Network Density = 0.0839233062917</p>
-<table>
-<thead>
-<tr>
-<th>count</th>
-<th>density</th>
-<th>attr_id</th>
-<th>attribute name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>34</td>
-<td>0.474153</td>
-<td>149</td>
-<td>employer-50</td>
-</tr>
-<tr>
-<td>27</td>
-<td>0.427350</td>
-<td>179</td>
-<td>work_location-132</td>
-</tr>
-<tr>
-<td>32</td>
-<td>0.411290</td>
-<td>173</td>
-<td>work_end_date-170</td>
-</tr>
-<tr>
-<td>33</td>
-<td>0.378788</td>
-<td>216</td>
-<td>work_start_date-168</td>
-</tr>
-<tr>
-<td>33</td>
-<td>0.378788</td>
-<td>185</td>
-<td>work_location-137</td>
-</tr>
-<tr>
-<td>57</td>
-<td>0.364662</td>
-<td>59</td>
-<td>aenyrid-59</td>
-</tr>
-<tr>
-<td>35</td>
-<td>0.349580</td>
-<td>169</td>
-<td>work_end_date-166</td>
-</tr>
-<tr>
-<td>46</td>
-<td>0.303382</td>
-<td>138</td>
-<td>alnid-137</td>
-</tr>
-<tr>
-<td>36</td>
-<td>0.288889</td>
-<td>7</td>
-<td>aby-7</td>
-</tr>
-<tr>
-<td>50</td>
-<td>0.251429</td>
-<td>132</td>
-<td>alnid-132</td>
-</tr>
-<tr>
-<td>72</td>
-<td>0.226135</td>
-<td>65</td>
-<td>aenyrid-65</td>
-</tr>
-<tr>
-<td>63</td>
-<td>0.214030</td>
-<td>92</td>
-<td>alsid-92</td>
-</tr>
-<tr>
-<td>76</td>
-<td>0.192281</td>
-<td>14</td>
-<td>aencnid-14</td>
-</tr>
-<tr>
-<td>153</td>
-<td>0.183867</td>
-<td>50</td>
-<td>aenslid-50</td>
-</tr>
-<tr>
-<td>32</td>
-<td>0.173387</td>
-<td>64</td>
-<td>aenyrid-64</td>
-</tr>
-<tr>
-<td>35</td>
-<td>0.144538</td>
-<td>63</td>
-<td>aenyrid-63</td>
-</tr>
-<tr>
-<td>81</td>
-<td>0.140741</td>
-<td>54</td>
-<td>aente-54</td>
-</tr>
-<tr>
-<td>44</td>
-<td>0.114165</td>
-<td>160</td>
-<td>work_end_date-157</td>
-</tr>
-<tr>
-<td>20</td>
-<td>0.105263</td>
-<td>101</td>
-<td>alsid-101</td>
-</tr>
-<tr>
-<td>211</td>
-<td>0.098398</td>
-<td>78</td>
-<td>agr-78</td>
-</tr>
-<tr>
-<td>233</td>
-<td>0.094717</td>
-<td>53</td>
-<td>aente-53</td>
-</tr>
-<tr>
-<td>211</td>
-<td>0.090905</td>
-<td>55</td>
-<td>aente-55</td>
-</tr>
-<tr>
-<td>130</td>
-<td>0.082528</td>
-<td>77</td>
-<td>agr-77</td>
-</tr>
-<tr>
-<td>27</td>
-<td>0.079772</td>
-<td>60</td>
-<td>aenyrid-60</td>
-</tr>
-<tr>
-<td>40</td>
-<td>0.074359</td>
-<td>201</td>
-<td>work_start_date-157</td>
-</tr>
-<tr>
-<td>21</td>
-<td>0.066667</td>
-<td>61</td>
-<td>aenyrid-6</td>
-</tr>
-<tr>
-<td>32</td>
-<td>0.048387</td>
-<td>66</td>
-<td>aenyrid-66</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Clustering-Coefficient"><a href="#Clustering-Coefficient" class="headerlink" title="Clustering Coefficient"></a>Clustering Coefficient</h2><p><strong>Clustering Coefficient</strong> is a measure of the degree to which nodes in a graph tend to cluster together. A high network density does not suggest a high clustering coefficient. There are two versions of clustering coefficient, the global and the local respectively. </p>
-<p><strong>Global Clustering Coefficient</strong> is defined as the number of closed triplets (or 3 * the number of triangles) over the total number of triplets (both open and closed), where a triplet consist of 3 connected nodes.</p>
-<p><strong>Local Clustering Coefficient</strong> quantifies how close a node’s neighbours are to being a clique (complete graph). The LCC of node $u$ in the directed network can be calculated as follows.<br>$$ LCC_u = \frac{|(v,w):(v,w) \in V|}{k_u*(k_u-1)}, $$<br>where $k_u$ is the number of neighbors of node $u$.</p>
-<table>
-<thead>
-<tr>
-<th>count</th>
-<th>gcc</th>
-<th>id</th>
-<th>name</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>32</td>
-<td>0.162251655629</td>
-<td>64</td>
-<td>aenyrid-64</td>
-</tr>
-<tr>
-<td>81</td>
-<td>0.160283416316</td>
-<td>54</td>
-<td>aente-54</td>
-</tr>
-<tr>
-<td>34</td>
-<td>0.157798723016</td>
-<td>149</td>
-<td>awkerid-50</td>
-</tr>
-<tr>
-<td>27</td>
-<td>0.138828633406</td>
-<td>179</td>
-<td>awklnid-132</td>
-</tr>
-<tr>
-<td>57</td>
-<td>0.131794155779</td>
-<td>59</td>
-<td>aenyrid-59</td>
-</tr>
-<tr>
-<td>46</td>
-<td>0.124894514768</td>
-<td>138</td>
-<td>alnid-137</td>
-</tr>
-<tr>
-<td>33</td>
-<td>0.123929008568</td>
-<td>216</td>
-<td>awkse-168</td>
-</tr>
-<tr>
-<td>33</td>
-<td>0.123867069486</td>
-<td>185</td>
-<td>awklnid-137</td>
-</tr>
-<tr>
-<td>32</td>
-<td>0.11854338843</td>
-<td>173</td>
-<td>awkee-170</td>
-</tr>
-<tr>
-<td>72</td>
-<td>0.116590681641</td>
-<td>65</td>
-<td>aenyrid-65</td>
-</tr>
-<tr>
-<td>63</td>
-<td>0.115428680542</td>
-<td>92</td>
-<td>alsid-92</td>
-</tr>
-<tr>
-<td>29</td>
-<td>0.10988372093</td>
-<td>210</td>
-<td>awkse-164</td>
-</tr>
-<tr>
-<td>50</td>
-<td>0.107070365359</td>
-<td>132</td>
-<td>alnid-132</td>
-</tr>
-<tr>
-<td>130</td>
-<td>0.106456206978</td>
-<td>77</td>
-<td>agr-77</td>
-</tr>
-<tr>
-<td>326</td>
-<td>0.105191970006</td>
-<td>127</td>
-<td>ale-127</td>
-</tr>
-<tr>
-<td>211</td>
-<td>0.102735541678</td>
-<td>78</td>
-<td>agr-78</td>
-</tr>
-</tbody>
-</table>
-<h2 id="Community-Detection-SBM"><a href="#Community-Detection-SBM" class="headerlink" title="Community Detection (SBM)"></a>Community Detection (SBM)</h2>
+        <p><strong>Community Detection</strong> is among the most popular research topics on social network. According to the definition, the nodes in the same community (module) have dense connections with each other. Many community detection algorithms or models originate from this idea. Among them, the Stochastic Block Model (SBM) is a generative graph model to produce graphs containing communities, subsets characterized by being connected with one another with particular edge densities. In this report, we conduct several experiments and discuss about the relationship among communities, network charateristics and attributes.</p>
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2016/11/06/observation/#more" class="more-link">Read More</a>
+          </div>
         
         
       
@@ -385,28 +97,14 @@
     <div class="entry">
       
         <h2 id="Scenario"><a href="#Scenario" class="headerlink" title="Scenario"></a>Scenario</h2><p>In Online Social Networks, a <strong>community structure</strong> is defined as a set of nodes grouped with internally dense connections from the whole network. That is to say, the probability for two nodes to form a social relation is higher if they are in the same community. The intrinsic reason for the community structure is so-called homophily, which indicates the trend that two similar social actors are more likely to be friends. The common aspects which are shared among nodes in the same community include common friends, or common properties (e.g., profile attributes). Therefore, it is possible to use community structures to infer the missing attributes as long as there exist some kinds of obvious correlations among social actors and attribtues.</p>
-<h2 id="Problem-Description"><a href="#Problem-Description" class="headerlink" title="Problem Description"></a>Problem Description</h2><p>Assume that we have a fully observed social network $G_N=(V_N, E_N)$ where $V_N$ is the social actor set and $E_N$ is the social relation set, and a partially observed actor-attribute bipartite graph $G_A=(V_N+V_A, E_A’), E_A’ \subset E_A$ where $V_A$ is the attribute node set, and $E_A$ is the set of all attribute links that really exist while $E_A’$ only contains the observed ones. Given an actor-attribute pair $(v, a) \in V_N \times V_A$, determine whether $(v,a) \in E_A$.</p>
-<h2 id="Modeling"><a href="#Modeling" class="headerlink" title="Modeling"></a>Modeling</h2><p>To infer the missing attributes, we first need to build a generative model to abstract the original social network with both stuctural information and profile information taken into consideration. In this step, we want our generative model to generate a new network which approaches the orignal network graph by means of obtaining the parameters (solve an optimization problem). Generally, a generative network model contains a matrix of the probabilities of every two social actors having a social relation.</p>
-<h3 id="Typical-Generative-Network-Models"><a href="#Typical-Generative-Network-Models" class="headerlink" title="Typical Generative Network Models"></a>Typical Generative Network Models</h3><ul>
-<li><strong>Chung Lu Graph Models (CL)</strong></li>
-</ul>
-<p>Every edge is sampled proportional to the product of the degrees of its endpoints<br>$$ P_{CL}(e_{i,j} \in E|\Theta_{CL}) = \frac{\theta_{d_i}\theta_{d_j}}{\sum_{v_k \in V}\theta_{d_k}} $$<br>where $\Theta_{CL}=\theta_{d_1},\ldots, \theta_{d_{|V|}}$ and $\theta_{d_i}=d_i$. The formulation guarantees the expected degree of the sampled graph is equal to the degree of the original graph.</p>
-<ul>
-<li><strong>Kronecker Product Graph Models (KPGM)</strong></li>
-</ul>
-<p>$K$ Kronecker products of a $b \times b$ initiator matrix of parameter $\Theta_{KP}$ are used to define the marginal probabilities of edges in the network.<br>$$ P_{KP}(e_{i,j} \in E|\Theta_{KP}) = \prod_{k=1}^{K} \Theta_{KP}(\sigma_{ki},\sigma_{kj}) $$<br>where $\sigma_{k,i}$ indicates the position of the parameter in the initiator matrix $\Theta_{KP}$ that is associated with $v_i$ in the $k$th Kronecker multiplication.</p>
-<h3 id="Generative-Attributed-Network-Models"><a href="#Generative-Attributed-Network-Models" class="headerlink" title="Generative Attributed Network Models"></a>Generative Attributed Network Models</h3><ul>
-<li><p><strong>Atributed Graph Model (AGM)</strong><br>If the correlations of attributes are taken into account, the generative model incorporates distributions over both the attribute $P(X|\Theta_X)$ and $P(E|\Theta_M)$.<br>$$ P(G|X, \Theta_{M}, \Theta_{F}) = \prod_{e_{i,j} \in E} P(e_{i,j}|f(x_i,x_j), \Theta_{M}, \Theta_{F}) $$<br>$$\begin{eqnarray}<br>P_o(e_{i,j}|f(x_i,x_j), \Theta_{M}, \Theta_{F}) &amp;=&amp; P_o(e_{i,j}|\Theta_{M}, \Theta_{F}) \frac{P_o(f(x_i,x_j)|e_{i,j}, \Theta_{M}, \Theta_{F})}{P_o(f(x_i,x_j)|\Theta_{M}, \Theta_{F})} \\<br>&amp;\approx&amp; P_M(e_{i,j}|\Theta_{M}) \frac{P_o(f(x_i,x_j)|e_{i,j}, \Theta_{M}, \Theta_{F})}{P_M(f(x_i,x_j)|e_{i,j},\Theta_{M}, \Theta_{F})}<br>\end{eqnarray}$$<br>where $x_i \in X$ (attribute vector/matrix), $f(x_i,x_j)$ is a deterministic function which maps tuples of attribute vectors to a single model of correlation across linked edges.</p>
-</li>
-<li><p><strong>Social Circle Detection</strong> Profile similarity parameter is introduced in this model, with social circle division treated as a latent variable.<br>$$<br>P_{SC}(e_{i,j}\in E|\mathcal{C}, \Theta_{SC}) = \frac{e^{\Phi(e_{i,j})}}{1+e^{\Phi(e_{i,j})}}<br>$$<br>$$<br>\Phi(e) = \sum_{C_k \in \mathcal{C}}(\delta(e \in C_k)) - \alpha_k \delta(e \notin C_k) \langle \phi(e), \theta_k \rangle<br>$$<br>where $\mathcal{C}$ is the social circle set, $\delta(c)$ is the indicator function, $\alpha_k$ is the pernalizing parameter and $\phi(e)$ is the profile similarity between two ends of the edge.</p>
-</li>
-</ul>
-<h3 id="Our-Model-Generative-Social-Attribute-Network-Model"><a href="#Our-Model-Generative-Social-Attribute-Network-Model" class="headerlink" title="Our Model: Generative Social Attribute Network Model"></a>Our Model: Generative Social Attribute Network Model</h3><p>The former models only use the similarity function as conditions. It is difficult to recover the attribute information from this kind of function. That is to say, we need to directly combine the attribute bigraph into conditions.<br>$$<br>P(G_N|G_A, \Theta_N, \Theta_A)=<br>\prod_{e_{i,j} \in E_N}{P(e_{i,j} \vert \mathcal{A}_{i}, \mathcal{A}_j, \Theta_N, \Theta_A)} \times \prod_{e_{i,j} \not\in E_N}{P(e_{i,j} \vert \mathcal{A}_i,\mathcal{A}_j, \Theta_N, \Theta_A)}<br>$$</p>
-
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2016/10/20/MiniProposal/#more" class="more-link">Read More</a>
+          </div>
         
         
       
@@ -425,26 +123,6 @@
   <div class="clearfix"></div>
 </nav></div></div>
     <aside id="sidebar" class="alignright">
-  <div class="search">
-  <form action="//google.com/search" method="get" accept-charset="utf-8">
-    <input type="search" name="q" results="0" placeholder="Search">
-    <input type="hidden" name="q" value="site:www.ranykm.com">
-  </form>
-</div>
-
-  
-
-  
-<div class="widget tag">
-  <h3 class="title">Tags</h3>
-  <ul class="entry">
-  
-    <li><a href="/tags/Social-Networks/">Social Networks</a><small>2</small></li>
-  
-  </ul>
-</div>
-
-
   <div class="widget bio">
 	<h3 class="title">Short Bio</h3>
 	<img src="/img/bio/logo.png"></img>
@@ -462,6 +140,19 @@
  		</ul>
  		
 </div> 
+
+  
+
+  
+<div class="widget tag">
+  <h3 class="title">Tags</h3>
+  <ul class="entry">
+  
+    <li><a href="/tags/Social-Networks/">Social Networks</a><small>2</small></li>
+  
+  </ul>
+</div>
+
 </aside>
     <div class="clearfix"></div>
   </div>
@@ -475,6 +166,18 @@
 <script src="/js/jquery.imagesloaded.min.js"></script>
 <script src="/js/gallery.js"></script>
 
+
+<script type="text/javascript">
+var disqus_shortname = 'jychen_uvic';
+
+(function(){
+  var dsq = document.createElement('script');
+  dsq.type = 'text/javascript';
+  dsq.async = true;
+  dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+  (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+}());
+</script>
 
 
 
