@@ -64,49 +64,14 @@
 <p>OAuth 2.0 is an authorization framework that enables applications to obtain limited access to user accounts on an HTTP service, such as Facebook, GitHub, and DigitalOcean. It works by delegating user authentication to the service that hosts the user account, and authorizing third-party applications to access the user account. OAuth 2 provides authorization flows for web and desktop applications, and mobile devices. </p>
 </blockquote>
 <p>In general, OAuth 2.0 is designed for authorization and authentication. Different from OpenID, it focuses more on authorization, which allows clients (e.g., the third party applications) to access the information and obtain the permissions of the user account.</p>
-<h3 id="What-are-the-roles-in-OAuth-2-0"><a href="#What-are-the-roles-in-OAuth-2-0" class="headerlink" title="What are the roles in OAuth 2.0?"></a>What are the roles in OAuth 2.0?</h3><p>OAuth defines four roles:</p>
-<ul>
-<li><p><strong>resource owner (user)</strong></p>
-<pre><code>An entity capable of granting access to a protected resource.
-When the resource owner is a person, it is referred to as an
-end-user.
-</code></pre></li>
-<li><p><strong>resource server (service/API)</strong></p>
-<pre><code>The server hosting the protected resources, capable of accepting
-and responding to protected resource requests using access tokens.
-</code></pre></li>
-<li><p><strong>client (application)</strong></p>
-<pre><code>An application making protected resource requests on behalf of the
-resource owner and with its authorization.  The term &quot;client&quot; does
-not imply any particular implementation characteristics (e.g.,
-whether the application executes on a server, a desktop, or other
-devices).
-</code></pre></li>
-<li><p><strong>authorization server (service/API)</strong></p>
-<pre><code>The server issuing access tokens to the client after successfully
-authenticating the resource owner and obtaining authorization.
-</code></pre></li>
-</ul>
-<p>The interaction between the authorization server and resource server<br>is beyond the scope of this specification.  The authorization server<br>may be the same server as the resource server or a separate entity.<br>A single authorization server may issue access tokens accepted by<br>multiple resource servers.</p>
-<h2 id="Some-other-terms"><a href="#Some-other-terms" class="headerlink" title="Some other terms"></a>Some other terms</h2><ul>
-<li><p><strong>User-agent</strong>: the software (a software agent) that is acting on behalf of a user (e.g., the user’s web browser)</p>
-</li>
-<li><p><strong>Client ID</strong>: a publicly exposed string that is used by the service API to identify the application</p>
-</li>
-<li><p><strong>Client Secret</strong>: a confident string that is used to authenticate the identity of the application to the service API</p>
-</li>
-</ul>
-<p><strong>Related Articles</strong></p>
-<ul>
-<li><a href="https://www.digitalocean.com/community/tutorials/an-introduction-to-oauth-2" target="_blank" rel="external">An Introduction to OAuth 2.0</a></li>
-<li><a href="https://tools.ietf.org/html/rfc6749" target="_blank" rel="external">Standard: The OAuth 2.0 Authorization Framework</a></li>
-<li><a href="http://huoding.com/2011/11/08/126" target="_blank" rel="external">(Chinese) OAuth的改变</a></li>
-</ul>
-
       
     </div>
     <footer>
       
+        
+          <div class="alignleft">
+            <a href="/2016/12/19/OAuth2/#more" class="more-link">Read More</a>
+          </div>
         
         
       
